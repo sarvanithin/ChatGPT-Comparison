@@ -1,50 +1,33 @@
-ChatGPT Comparison Detection Project 🔬
+**Updates:**
 
-Project Overview
-The ChatGPT Comparison Detection Project focuses on creating a system that can identify and analyze comparative statements within text data. Utilizing ChatGPT, an advanced language model, this project aims to provide a solution for detecting and understanding comparisons.
+** 2023/01/18, the HC3 datasets (English & Chinese) are available at 🤗 HuggingFace & ModelScope!
 
-Features
-
-Comparison Detection: The main objective is to locate and extract comparisons from text, offering insights into the entities involved and the nature of their comparison.
-
-Natural Language Understanding: By leveraging ChatGPT's natural language processing abilities, the system interprets complex linguistic structures to improve the accuracy of comparison detection.
-
-Scalable and Extensible: The project is designed to be both scalable and extendable, making it suitable for integration into various applications, such as content analysis tools and sentiment analysis systems.
-
-Getting Started
-
-Prerequisites
-
-Python 3
-ChatGPT API Key (Obtain by signing up on OpenAI's platform)
-Installation
-
-Clone the repository.
-
-Install the required dependencies:
+** 2023/01/18, HC3 数据集 (中文版 & 英文版) 已经上线 🤗 HuggingFace & ModelScope!
 
 
-pip install -r requirements.txt
-Configure your ChatGPT API key by adding it to a configuration file:
+---
 
-Create a file named config.py and include:
+**HC3 (Engllish) @HuggingFace :**\
+https://huggingface.co/datasets/Hello-SimpleAI/HC3
 
-python
-API_KEY = 'your_api_key_here'
-Usage
+**HC3 (Chinese) @HuggingFace :**\
+https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese
 
-Run the main application:
+**HC3 (英文版) @ModelScope :**\
+https://www.modelscope.cn/datasets/simpleai/HC3
 
-python app.py
-Access the application via http://localhost:5000 in your web browser.
+**HC3 (中文版) @ModelScope :**\
+https://www.modelscope.cn/datasets/simpleai/HC3-Chinese
 
-Input or paste the text you want to analyze and click the "Detect Comparisons" button.
 
-Contributing
-We welcome contributions! If you have suggestions for improvements, feature requests, or bug reports, please open an issue.
+<img width="512" alt="image" src="https://user-images.githubusercontent.com/37113676/213214747-f03e15e6-6601-49ff-8c48-ace14f114572.png">
 
-License
-This project is licensed under the MIT License.
+---
+We release the **training and testing corpus** used in our ChatGPT detector(s), including:
+- [不过滤-全文](https://drive.google.com/drive/folders/1st2HLKSOVajekT_RvYRP2sFAfnLGC2g-?usp=sharing) contains question-answer pairs, where the answer contains **all** the text **without** filtering indicating words. Both English and Chinese verions are provided.
+- [不过滤-句子](https://drive.google.com/drive/folders/1m5X5tiiBIJiFGGhDviAyk1ipz5WxftPs?usp=sharing) contains question-answer pairs, where the answer contains only one **splited** sentence **without** filtering indicating words. Both English and Chinese verions are provided.
+- [过滤-全文](https://drive.google.com/drive/folders/1qZF6NaTdaHrMvqljpnVGl6gIHgaCT49i?usp=sharing) contains question-answer pairs, where the answer contains **all** the text and **filters** the indicating words. Both English and Chinese verions are provided.
+- [过滤-句子](https://drive.google.com/drive/folders/1uY1-Ef8S_oxRFDofQSf649V_ESzr7hiU?usp=sharing) contains question-answer pairs, where the answer contains only one **splited** sentence and **filters** the indicating words. Both English and Chinese verions are provided.
 
-Acknowledgments
-This project utilizes the ChatGPT API from OpenAI. We also extend our gratitude to the open-source community for their contributions to the libraries and tools used.
+---
+Besides, we provide [DEMO](https://github.com/Hello-SimpleAI/chatgpt-comparison-detection/blob/main/HC3/demo_indicating_words.ipynb) for removing the indicating words in Human or ChatGPT answers, including both English and Chinese corpus.
